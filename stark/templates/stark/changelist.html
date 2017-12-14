@@ -1,0 +1,37 @@
+{% load staticfiles %}
+{#{% load v1tag %}#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>changelist</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+</head>
+<body>
+<div class="container">
+<h3>列表信息</h3>
+    <table class="table table-bordered table-responsive">
+        <thead>
+        <tr>
+                {% for item in head_list %}
+                    <th>{{ item }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+        {% for obj in data_list %}
+            <tr>
+                {% for col in obj %}
+                    <td>{{ col }}</td>
+                {% endfor %}
+
+            </tr>
+        {% endfor %}
+{#        {% changelist_view request %}#}
+        </tbody>
+
+    </table>
+</div>
+
+</body>
+</html>
