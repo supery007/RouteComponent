@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stark-form.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>修改页面</h2>
+        {% include 'stark/form.html' %}
+    </div>
+</body>
+</html>

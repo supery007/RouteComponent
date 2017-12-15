@@ -10,6 +10,9 @@
 <body>
 <div class="container">
 <h3>列表信息</h3>
+{% if show_add_btn %}
+    <a class="btn btn-primary" href="{{ add_url }}">添加</a>
+{% endif %}
     <table class="table table-bordered table-responsive">
         <thead>
         <tr>
